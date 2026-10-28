@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard principal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <section>
+                <div class="logo-container">
+                    <img src="" alt="" srcset="">
+                </div>
+            </section>
+
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Principal
+                    </a>
+                </li>
+                <li>
+                    <a href="put.html">
+                        Modificar
+                    </a>
+                </li>
+                <li>
+                    <a href="post.html">
+                        Crear
+                    </a>
+                </li>
+                <li>
+                    <a href="get.html">
+                        Obtener
+                    </a>
+                </li>
+                <li>
+                    <a href="delete.html">
+                        Eliminar
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section></section>
+    </main>
+    <footer></footer>
+
+    <script>
+        const contenedorProductos = document.getElementById('contenedor-productos')
+
+        async function obtenerProductos() {
+            const urlbase = 'http://localhost:3000'
+
+            const response = await fetch(`${urlBase}/api/products`);
+            console.log(response);
+
+            
+
+        }
+
+        obtenerProductos();
+    </script>
+
+</body>
+</html>
